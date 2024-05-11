@@ -1,7 +1,6 @@
 const app = require("./app");
 const mongoose = require("mongoose");
-
-const DB_HOST = "mongodb+srv://Viktoriia:Vika1111@cluster0.ufwzkax.mongodb.net/";
+const { DB_HOST } = require("./config");
 
 mongoose.set('strictQuery', true)
 
@@ -11,3 +10,4 @@ mongoose.connect(DB_HOST)
         console.log(error.message);
         process.exit()
     });
+
