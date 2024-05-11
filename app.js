@@ -2,8 +2,11 @@ const express = require("express");
 const morgan = require("morgan");
 const cors = require("cors");
 const { contactsRouter } = require("./routes/contactsRouter");
+const dotenv = require("dotenv");
 
 const app = express();
+
+dotenv.config()
 
 app.use(morgan("tiny"));
 app.use(cors());
